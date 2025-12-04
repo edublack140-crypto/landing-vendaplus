@@ -15,9 +15,7 @@ import {
   Star,
   Mail,
   Phone,
-  MessageCircle,
-  FileText,
-  Zap
+  MessageCircle
 } from "lucide-react";
 
 export default function VendaMaisLanding() {
@@ -90,14 +88,9 @@ export default function VendaMaisLanding() {
               <p className="text-xs text-gray-600">Alcance. Mais vendas.</p>
             </div>
           </div>
-          <a 
-            href="https://dashboard.keoto.com/home"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
-          >
+          <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105">
             Começar Agora
-          </a>
+          </button>
         </div>
       </header>
 
@@ -105,98 +98,54 @@ export default function VendaMaisLanding() {
       <section className="container mx-auto px-4 py-16 md:py-24 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Seus anúncios não vendem? Suas fotos não chamam atenção?{" "}
+            O app que facilita a criação, organização e publicação dos seus{" "}
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Nós resolvemos isso!
+              anúncios
             </span>
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Pare de perder vendas por não saber criar anúncios que convertem ou editar fotos profissionais. 
-            O Venda+ transforma seus produtos em anúncios irresistíveis que vendem sozinhos.
+            Simplifique sua rotina de vendas e alcance mais clientes com ferramentas inteligentes
           </p>
           <button 
             onClick={() => document.getElementById('quiz')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
           >
-            Descubra como vender 3x mais
+            Descubra como vender mais
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
       </section>
 
-      {/* Problems Section */}
-      <section className="container mx-auto px-4 py-16 md:py-20 bg-red-50 rounded-3xl my-8">
-        <h3 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
-          Você está perdendo vendas todos os dias por causa disso:
-        </h3>
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-12">
-          {[
-            {
-              problem: "Seus anúncios não aparecem nas buscas",
-              impact: "Clientes não encontram seus produtos"
-            },
-            {
-              problem: "Suas fotos parecem amadoras",
-              impact: "Clientes não confiam e não compram"
-            },
-            {
-              problem: "Você não sabe o que escrever",
-              impact: "Descrições fracas = zero vendas"
-            }
-          ].map((item, index) => (
-            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg border-2 border-red-200">
-              <p className="text-lg font-bold text-red-600 mb-2">❌ {item.problem}</p>
-              <p className="text-gray-700">{item.impact}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Features Section */}
       <section className="container mx-auto px-4 py-16 md:py-20">
-        <h3 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
-          Como o Venda+ resolve seus problemas
+        <h3 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+          Tudo que você precisa em um só lugar
         </h3>
-        <p className="text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
-          Ferramentas profissionais que transformam qualquer produto em um anúncio que vende
-        </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            {
-              icon: FileText,
-              title: "Títulos e Descrições que Vendem",
-              description: "Nunca mais fique sem saber o que escrever. O app cria títulos otimizados e descrições persuasivas automaticamente para cada produto.",
-              color: "from-blue-500 to-cyan-500"
-            },
-            {
-              icon: Zap,
-              title: "Anúncios Otimizados para Busca",
-              description: "Seus produtos aparecem primeiro nas buscas com palavras-chave estratégicas que atraem mais clientes.",
-              color: "from-yellow-500 to-orange-500"
-            },
-            {
-              icon: ImageIcon,
-              title: "Edição Profissional de Fotos",
-              description: "Transforme fotos simples em imagens profissionais que chamam atenção e geram confiança instantânea.",
-              color: "from-orange-500 to-red-500"
-            },
             {
               icon: Package,
               title: "Organização Inteligente",
-              description: "Nunca mais perca uma venda por desorganização. Gerencie produtos e estoque de forma simples e eficiente.",
-              color: "from-purple-500 to-pink-500"
+              description: "Gerencie produtos e estoque de forma simples e eficiente",
+              color: "from-blue-500 to-cyan-500"
             },
             {
               icon: Calendar,
               title: "Agendamento Automático",
-              description: "Economize horas todo dia. Programe postagens em redes sociais e marketplaces para publicar no melhor horário.",
-              color: "from-green-500 to-emerald-500"
+              description: "Programe postagens em redes sociais e marketplaces",
+              color: "from-purple-500 to-pink-500"
+            },
+            {
+              icon: ImageIcon,
+              title: "Biblioteca de Mídia",
+              description: "Armazene e organize todas as suas fotos e vídeos",
+              color: "from-orange-500 to-red-500"
             },
             {
               icon: Sparkles,
-              title: "Sugestões Inteligentes de Conteúdo",
-              description: "Nunca mais fique sem ideias. Receba sugestões automáticas de conteúdos que realmente convertem em vendas.",
-              color: "from-indigo-500 to-purple-500"
+              title: "Sugestões Inteligentes",
+              description: "Receba ideias automáticas de conteúdos para vender mais",
+              color: "from-green-500 to-emerald-500"
             }
           ].map((feature, index) => (
             <div 
@@ -258,17 +207,16 @@ export default function VendaMaisLanding() {
                   <Check className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  Perfeito! Você está a um passo de vender 3x mais
+                  Perfeito! Vamos turbinar suas vendas
                 </h3>
                 <p className="text-lg text-gray-600 mb-8">
-                  Com base nas suas respostas, o Venda+ pode transformar completamente seus resultados. 
-                  Lojistas como você aumentaram as vendas em até 300% nos primeiros 60 dias.
+                  Com base nas suas respostas, o Venda+ pode aumentar suas vendas em até 300%
                 </p>
                 <button
                   onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
                   className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
                 >
-                  Ver Planos e Começar Agora
+                  Ver Planos
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
@@ -283,7 +231,7 @@ export default function VendaMaisLanding() {
           Escolha o melhor plano para você
         </h3>
         <p className="text-center text-gray-600 mb-12 text-lg">
-          Invista em você e comece a vender mais hoje mesmo
+          Comece a vender mais hoje mesmo
         </p>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -300,8 +248,6 @@ export default function VendaMaisLanding() {
             <ul className="space-y-4 mb-8">
               {[
                 "Produtos ilimitados",
-                "Títulos e descrições otimizadas",
-                "Edição profissional de fotos",
                 "Agendamento de postagens",
                 "Biblioteca de mídia",
                 "Sugestões de conteúdo",
@@ -316,14 +262,9 @@ export default function VendaMaisLanding() {
               ))}
             </ul>
 
-            <a
-              href="https://dashboard.keoto.com/home"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full bg-gray-900 text-white py-4 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 text-center"
-            >
+            <button className="w-full bg-gray-900 text-white py-4 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105">
               Começar Agora
-            </a>
+            </button>
           </div>
 
           {/* Plano Anual */}
@@ -344,11 +285,10 @@ export default function VendaMaisLanding() {
             <ul className="space-y-4 mb-8">
               {[
                 "Tudo do plano mensal",
-                "Análises avançadas de performance",
-                "Suporte prioritário via WhatsApp",
+                "Análises avançadas",
+                "Suporte prioritário",
                 "Treinamento exclusivo",
-                "Recursos beta antecipados",
-                "Consultoria mensal gratuita"
+                "Recursos beta antecipados"
               ].map((feature, index) => (
                 <li key={index} className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
@@ -359,14 +299,9 @@ export default function VendaMaisLanding() {
               ))}
             </ul>
 
-            <a
-              href="https://dashboard.keoto.com/home"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full bg-white text-purple-600 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all duration-300 hover:scale-105 text-center"
-            >
+            <button className="w-full bg-white text-purple-600 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all duration-300 hover:scale-105">
               Começar Agora
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -374,7 +309,7 @@ export default function VendaMaisLanding() {
       {/* Testimonials Section */}
       <section className="container mx-auto px-4 py-16 md:py-20">
         <h3 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-          Resultados reais de quem usa o Venda+
+          O que nossos clientes dizem
         </h3>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -382,19 +317,19 @@ export default function VendaMaisLanding() {
             {
               name: "Maria Silva",
               role: "Loja de Cosméticos",
-              content: "Eu não sabia criar anúncios que vendessem. Com o Venda+, minhas vendas triplicaram em 2 meses! Os títulos otimizados fazem toda diferença.",
+              content: "Minhas vendas triplicaram em 2 meses! O agendamento automático me economiza horas todo dia.",
               rating: 5
             },
             {
               name: "João Santos",
               role: "Vendedor no Mercado Livre",
-              content: "Minhas fotos eram horríveis e eu perdia vendas por isso. Agora com a edição profissional do app, meu faturamento aumentou 250%!",
+              content: "Finalmente consigo organizar meus produtos e postar regularmente. Meu faturamento aumentou 250%!",
               rating: 5
             },
             {
               name: "Ana Costa",
               role: "Loja de Moda",
-              content: "Eu ficava horas pensando no que escrever. As sugestões de descrição do Venda+ são incríveis! Nunca mais fiquei travada.",
+              content: "As sugestões de conteúdo são incríveis! Nunca mais fiquei sem ideias para postar.",
               rating: 5
             }
           ].map((testimonial, index) => (
@@ -423,20 +358,18 @@ export default function VendaMaisLanding() {
       <section className="bg-gradient-to-r from-purple-600 to-pink-600 py-16 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Pare de perder vendas por anúncios ruins
+            Pronto para aumentar suas vendas?
           </h3>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Junte-se a milhares de lojistas que transformaram seus resultados com anúncios profissionais que vendem sozinhos
+            Junte-se a milhares de lojistas que já estão vendendo mais com o Venda+
           </p>
-          <a
-            href="https://dashboard.keoto.com/home"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105"
+          <button 
+            onClick={resetQuiz}
+            className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
           >
-            Começar Agora e Vender Mais
+            Começar Gratuitamente
             <ChevronRight className="w-5 h-5" />
-          </a>
+          </button>
         </div>
       </section>
 
@@ -455,7 +388,7 @@ export default function VendaMaisLanding() {
                 </div>
               </div>
               <p className="text-gray-400 text-sm">
-                A solução completa para lojistas que querem vender mais com anúncios profissionais
+                A solução completa para lojistas que querem vender mais
               </p>
             </div>
 
